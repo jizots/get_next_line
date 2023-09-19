@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_gnl.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 18:55:46 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/07/12 14:21:12 by hotph            ###   ########.fr       */
+/*   Updated: 2023/09/19 15:35:41 by sotanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ static char	*ft_read_file(char *save, int fd, char *buf, int byte_rd)
 			ft_free(buf, save);
 			return (NULL);
 		}
-		else if (byte_rd > 0)
+		else if (byte_rd >= 0)
 		{
 			buf[byte_rd] = '\0';
 			tmp = save;
