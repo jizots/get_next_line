@@ -25,10 +25,13 @@ int main(void)
         printf("%s", line);
         free(line);
     }
+    close(fd1);
+    close(fd2);
     system("leaks a.out");
 }
 # else
 #include "includes/get_next_line.h"
+#include <unistd.h>
 int main(void)
 {
     int fd;
@@ -45,6 +48,8 @@ int main(void)
         printf("%s\n", line);
         free(line);
     }
+    close(fd);
+    // sleep(10);
     system("leaks a.out");
 }
 

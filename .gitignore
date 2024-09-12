@@ -1,2 +1,4 @@
 get_next_line.h.gch
 .DS_Store
+*.o
+a.out
