@@ -1,16 +1,16 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_gnl_bonus.c                                     :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/10 18:55:46 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/09/11 11:32:03 by hotph            ###   ########.fr       */
+/*   Created: 2024/09/12 10:39:07 by hotph             #+#    #+#             */
+/*   Updated: 2024/09/12 10:39:12 by hotph            ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
-#include "ft_gnl.h"
+#include "../includes/get_next_line.h"
 
 static int	ft_get_save(char **save)
 {
@@ -88,7 +88,7 @@ static char	*ft_read_file(char *save, int fd, char *buf, int byte_rd)
 	return (save);
 }
 
-char	*ft_gnl(int fd)
+char	*get_next_line(int fd)
 {
 	static char	*save[OPEN_MAX];
 	char		*buf;
@@ -119,7 +119,7 @@ char	*ft_gnl(int fd)
 // 	printf("fd : %d\n", fd);
 // 	while (1)
 // 	{
-// 		line = ft_gnl(fd);
+// 		line = get_next_line(fd);
 // 		printf ("result->%s<-\n", line);
 // 		if (line == NULL)
 // 			break ;

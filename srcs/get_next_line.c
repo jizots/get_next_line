@@ -1,16 +1,16 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_gnl.c                                           :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/10 18:55:46 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/09/19 15:35:41 by sotanaka         ###   ########.fr       */
+/*   Created: 2024/09/12 10:39:17 by hotph             #+#    #+#             */
+/*   Updated: 2024/09/12 11:53:01 by hotph            ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
-#include "ft_gnl.h"
+#include "../includes/get_next_line.h"
 
 static int	ft_get_save(char **save)
 {
@@ -88,7 +88,7 @@ static char	*ft_read_file(char *save, int fd, char *buf, int byte_rd)
 	return (save);
 }
 
-char	*ft_gnl(int fd)
+char	*get_next_line(int fd)
 {
 	static char	*save;
 	char		*buf;
@@ -109,27 +109,3 @@ char	*ft_gnl(int fd)
 		return (ft_free(result, NULL));
 	return (result);
 }
-
-// int main()
-// {
-// 	char *line;
-// 	int fd;
-
-// 	fd = open("tmp", O_RDONLY);
-// 	printf("fd : %d\n", fd);
-// 	while (1)
-// 	{
-// 		line = ft_gnl(fd);
-// 		printf ("result->%s<-\n", line);
-// 		if (line == NULL)
-// 			break ;
-// 		free(line);
-// 	}
-
-// }
-
-// __attribute__((destructor))
-// static void destructor()
-// {
-// 	system("leaks -q a.out");
-// }

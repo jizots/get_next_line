@@ -11,7 +11,7 @@ Works effectively both with files and standard input.
 Includes error handling for unexpected terminations.  
   
 ## Usage
-To use ft_gnl, include it in your C project:  
+To use get_next_line, include it in your C project:  
 
 Compile the project with the function.  
-Call ft_gnl with a valid file descriptor to read lines one by one.  
+Call get_next_line with a valid file descriptor to read lines one by one.  
